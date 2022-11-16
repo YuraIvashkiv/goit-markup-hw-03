@@ -54,7 +54,7 @@ h1,
 h2,
 h3,
 p,
-ul {
+ul{
   margin: 0;
   padding: 0;
 }
@@ -209,8 +209,8 @@ padding-left: 32px;
 padding-right: 32px;
 border-radius: 4px;
 margin-bottom: 200px;
-
 }
+
 /* ефект фокусу і ховера для кнопки в герої */
 .hero-button:hover,
 .hero-button:focus{
@@ -296,6 +296,9 @@ padding-bottom: 94px;
  .list.team .item{
   background-color:var(--first-background);
 }
+.team-img {
+  margin-bottom: 30px;
+}
 
 /* стилізації імені, секція team */
 .team-title-name {
@@ -344,6 +347,7 @@ text-align: center;
   margin-bottom: 9px;
 }
 .footer {
+  font-style: normal;
   line-height: 1.71;
 letter-spacing: 0.03em;
 }
@@ -406,20 +410,21 @@ color: var(--footer-main-color-text);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.header-portfolio{
+  border: 1px solid #ECECEC;
+}
 
 /* Стилізація усіх кнопок */
 .cursor.list {
-           padding-bottom: 50px;
-          margin-left: 273px;
-    
-      }
+           margin-bottom: 50px;
+        justify-content: center
+          }
 .container .button {
   display: flex;
 }
 
-
 .button .item + .item {
-  margin-left: 29px;
+  margin-left: 8px;
   }
 .button-item {
     font-family: inherit;
@@ -433,6 +438,7 @@ color: var(--footer-main-color-text);
   padding: 6px 22px;
   border: 1px solid transparent;
   background-color: var(--background-color-team);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
     }
 
@@ -457,42 +463,61 @@ color: var(--footer-main-color-text);
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  
    }
 .flex-item {
   width: 370px;
-   margin-bottom: 20px;
+   /* margin-bottom: 20px; */
    margin-left: 0;
-  }
-.flex-container .flex-item {
+  border-left: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+     }
+
+ /* .flex-item {
   flex-basis: calc((100% - 60px) / 3);
-    margin-right: 30px;
-  }
- .flex-item:nth-child(3n) {
-   margin-right: 0;
- }
+  margin-right: 30px;
+     }  */
+
+      .flex-item:not(:nth-child(3n)) {
+margin-right: 30px;
+      }  
+/* 
+.flex-item:nth-child(3n) {
+  margin-right: 0;
+} */
+
+.flex-item:nth-last-child(-n + 3) {
+  margin-bottom: 20px;
+}
 
 
 
 
-
-
+ 
 
 
 
 /* Стилізація заголовка */
+.header-text {
+    margin-top: 20px;
+    margin-right: 24px;
+    margin-bottom: 20px;
+    margin-left: 24px;
+}
 .header-img {
   color: var(--main-color-text);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  text-align: center;
+ 
 }
+
 /* Стилізація опису */
 .text-img {
   color: var(--second-color-text);
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  text-align: center;
-}
+  }
